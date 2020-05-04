@@ -1,0 +1,20 @@
+{
+    "name": "zero1/base",
+    "description": "ZERO-1 Base Extension",
+    "require": {
+        "php": "~5.6.5|^7.0"
+    },
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "Commercial"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Zero1\\Base\\": ""
+        }
+    }
+}
