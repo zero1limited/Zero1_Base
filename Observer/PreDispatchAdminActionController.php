@@ -2,6 +2,7 @@
 namespace Zero1\Base\Observer;
 
 use Magento\Framework\Event\ObserverInterface;
+use \Psr\Log\LoggerInterface;
 
 class PreDispatchAdminActionController implements ObserverInterface
 {
@@ -39,7 +40,7 @@ class PreDispatchAdminActionController implements ObserverInterface
             try {
                 /** @var \Zero1\Base\Model\Feed $feedModel */
                 $feedModel = $this->feedFactory->create();
-                $feedModel->checkUpdate();
+		        $feedModel->checkUpdate();
                 $feedModel->removeExpiredItems();
             } catch (\Exception $e) {
                 die($e->getMessage());

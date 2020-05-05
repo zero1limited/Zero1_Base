@@ -25,15 +25,6 @@ class Messages extends \Magento\Backend\Block\Template
         $this->request = $request;
     }
 
-    /**
-     * @return array
-     */
-    public function getMessages()
-    {
-        die(__METHOD__);
-        foreach($this->messageManager->getMessages() as $message) {
-            die('dddd');
-        }
-        return $this->messageManager->getMessages();
-    }
+
+
 }
