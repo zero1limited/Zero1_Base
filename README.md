@@ -1,1 +1,0 @@
-# magento2-zero1-base
