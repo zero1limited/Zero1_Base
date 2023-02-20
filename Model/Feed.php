@@ -137,7 +137,7 @@ class Feed
                     'date_added' => date('Y-m-d H:i:s'),
                     'title' => html_entity_decode($this->convertString($item->title)),
                     'description' => html_entity_decode($this->convertString($item->description)),
-                    'url' => $this->convertString($item->link).'?utm_source=map&utm_medium=organic&utm_campaign=zero1-base'
+                    'url' => $this->convertString($item->link).'?utm_source=map&utm_medium=organic&utm_campaign=zero1-base&utm_content='.$item->title
                 ];
             }
 
