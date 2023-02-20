@@ -1,8 +1,7 @@
 {
-    "name": "zero1limited/base",
+    "name": "zero1/base",
     "description": "ZERO-1 Base Extension",
     "type": "magento2-module",
-    "version": "1.0.3",
     "autoload": {
         "files": [
             "registration.php"
