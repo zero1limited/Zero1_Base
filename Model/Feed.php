@@ -190,7 +190,7 @@ class Feed
         $curlObject = $this->curlFactory->create();
         $curlObject->setConfig(['timeout' => 2,]);
 
-        $curlObject->write(\Zend_Http_Client::GET, self::FEED_URL, '1.0');
+        $curlObject->write(\Laminas\Http\Request::METHOD_GET, self::FEED_URL, '1.0');
         $result = $curlObject->read();
 
         if ($result === false || $result === '') {
