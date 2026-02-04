@@ -290,5 +290,14 @@ class Feed
         return $this;
     }
 
+    private function getModuleConfig($field)
+    {
+        return $this->scopeConfig->getValue(
+            'zero1_base/' . $field,
+            ScopeInterface::SCOPE_STORE,
+            $this->storeManager->getStore()->getId()
+        );
+    }
+
 
 }

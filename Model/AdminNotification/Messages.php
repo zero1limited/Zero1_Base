@@ -4,7 +4,7 @@ namespace Zero1\Base\Model\AdminNotification;
 
 class Messages
 {
-    const MDOQNOTIFY_SESSION_IDENTIFIER = 'zero1base-session-messages';
+    const ZERO1BASE_SESSION_IDENTIFIER = 'zero1base-session-messages';
 
     /**
      * @var \Magento\Backend\Model\Session
