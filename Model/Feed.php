@@ -190,16 +190,19 @@ class Feed
         $curlObject = $this->curlFactory->create();
         $curlObject->setConfig(['timeout' => 2,]);
 
-        $curlObject->write(\Laminas\Http\Request::METHOD_GET, self::FEED_URL, '1.0');
+        $curlObject->write('GET', self::FEED_URL, '1.0');
         $result = $curlObject->read();
 
         if ($result === false || $result === '') {
             return false;
         }
 
-        $result = preg_split('/^\r?$/m', $result, 2);
-        $result = trim($result[1]);
         $curlObject->close();
+        $result = preg_split('/^\r?$/m', $result, 2);
+        if (!isset($result[1])) {
+            return false;
+        }
+        $result = trim($result[1]);
 
         try {
             $xml = new \SimpleXMLElement($result);

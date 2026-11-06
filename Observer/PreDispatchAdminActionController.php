@@ -40,10 +40,9 @@ class PreDispatchAdminActionController implements ObserverInterface
             try {
                 /** @var \Zero1\Base\Model\Feed $feedModel */
                 $feedModel = $this->feedFactory->create();
-		        $feedModel->checkUpdate();
+                $feedModel->checkUpdate();
                 $feedModel->removeExpiredItems();
             } catch (\Exception $e) {
-                die($e->getMessage());
                 $this->logger->critical($e);
             }
         }
